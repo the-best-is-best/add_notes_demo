@@ -3,7 +3,7 @@
 * Todo App.
 ## video
 
-[<img src="github_assets/1.jpg">](https://youtu.be/JmKzLWJ0hy8
+[<img src="github_assets/1.jpg">](https://youtu.be/dDkKXoWPcjs
  "Now in Android: 21 or above")
 
 
