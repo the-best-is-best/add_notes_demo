@@ -100,7 +100,7 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
                           isExpanded: true,
                           style: getRegularStyle(fontSize: FontSize.s18),
 
-                          value: appCubit.userSelected,
+                          value: appCubit.notes[widget.index].userId,
                           decoration: InputDecoration(
                             labelStyle: const TextStyle(color: Colors.black),
                             label: const Text("Assign To User"),

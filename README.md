@@ -1,16 +1,20 @@
 # pos_bank
 
-A new Flutter project.
+* Todo App.
+## video
 
-## MitXting Started
+[<img src="github_assets/1.jpg">](https://youtu.be/JmKzLWJ0hy8
+ "Now in Android: 21 or above")
 
-This project is a starting point for a Flutter application.
 
-A few resources to MitX you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/MitX-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help MitXting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## images
+# All note
+![Todo App1](github_assets/1.jpg)
+# edit note
+![Todo App2](github_assets/2.jpg)
+# add user
+![Todo App3](github_assets/3.jpg)
+# Add user Validation
+![Todo App4](github_assets/4.jpg)
+# option
+![Todo App7](github_assets/5.jpg)

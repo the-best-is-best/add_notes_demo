@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mit_x/mit_x.dart';
+import 'package:pos_bank/app/cubit/app_cubit.dart';
 import 'package:pos_bank/app/resources/font_manger.dart';
 import 'package:pos_bank/app/resources/styles_manger.dart';
 
@@ -49,6 +50,7 @@ class MyInputField extends StatelessWidget {
             ? IconButton(
                 onPressed: () {
                   controller.text = "";
+                  AppCubit.get(context).searchNote('');
                 },
                 icon: const Icon(Icons.close))
             : null,

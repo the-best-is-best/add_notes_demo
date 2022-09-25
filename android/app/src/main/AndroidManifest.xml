@@ -1,5 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.pos_bank">
+        <uses-permission android:name="android.permission.INTERNET"/>
+
    <application
         android:label="pos_bank"
         android:name="${applicationName}"
