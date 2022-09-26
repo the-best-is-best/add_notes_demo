@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 class UserModel {
   final String name;
   final String password;
@@ -13,4 +15,16 @@ class UserModel {
       required this.imageAsBase64,
       required this.interestId,
       required this.id});
+
+  factory UserModel.fromJson(Map json) {
+    return UserModel(
+        id: json['id'].toString(),
+        email: json['email'],
+        imageAsBase64: json['imageAsBase64'] != null
+            ? (base64.decode(json['imageAsBase64'].toString())).toString()
+            : null,
+        interestId: json['intrestId'],
+        name: json['username'],
+        password: json['password']);
+  }
 }

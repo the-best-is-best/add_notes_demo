@@ -6,7 +6,7 @@ import '../../app/constants.dart';
 class DioManger {
   static late Dio dioApi;
 
-  static init() async {
+  static Future<void> init() async {
     dioApi = Dio(
       BaseOptions(
         baseUrl: Constants.baseUrl,

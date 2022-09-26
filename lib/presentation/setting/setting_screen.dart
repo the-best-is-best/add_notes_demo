@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:pos_bank/app/cubit/app_cubit.dart';
 import 'package:pos_bank/app/resources/font_manger.dart';
 import 'package:pos_bank/app/resources/styles_manger.dart';
@@ -38,6 +39,7 @@ class _SettingScreenState extends State<SettingScreen> {
                 value: AppCubit.get(context).useSqlLite,
                 onChanged: (bool? val) {
                   AppCubit.get(context).useSqlLite = val ?? false;
+                  GetStorage().write('useSql', val);
                   setState(() {});
                 },
               ),

@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         child: MitXMaterialApp(
           title: 'Flutter Demo',
           theme: ThemeData(
-              primarySwatch: Colors.blue,
+              primarySwatch: Colors.deepPurple,
               appBarTheme: AppBarTheme(
                 backgroundColor: Colors.deepPurple[800],
               )),

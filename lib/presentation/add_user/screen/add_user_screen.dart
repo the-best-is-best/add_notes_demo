@@ -10,7 +10,6 @@ import 'package:pos_bank/app/extension/form_state_extension.dart';
 import 'package:pos_bank/app/resources/font_manger.dart';
 import 'package:pos_bank/app/resources/styles_manger.dart';
 import 'package:pos_bank/domain/models/interested_model.dart';
-import 'package:pos_bank/domain/models/users_model.dart';
 import 'package:pos_bank/gen/assets.gen.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:pos_bank/presentation/add_user/cubit/add_user_cubit.dart';
@@ -35,12 +34,15 @@ class _AddUserScreenState extends State<AddUserScreen> {
     AppCubit appCubit = AppCubit.get(context);
 
     return BlocProvider(
-      create: (context) => AddUserCubit(),
+      create: (context) => AddUserCubit(di()),
       child: Scaffold(
         appBar: AppBar(title: const Text("Add User")),
         body: Builder(builder: (context) {
           AddUserCubit addUserCubit = AddUserCubit.get(context);
 
+          if (appCubit.useSqlLite) {
+            addUserCubit.interestsIdSelected = "1";
+          }
           return SingleChildScrollView(
               child: SizedBox(
             height: context.height * .9,
@@ -165,6 +167,7 @@ class _AddUserScreenState extends State<AddUserScreen> {
                                 ),
                                 items: appCubit.interested
                                     .map((InterestedModel items) {
+                                  debugPrint(items.id);
                                   return DropdownMenuItem(
                                     value: items.id,
                                     child: Text(items.interestText),

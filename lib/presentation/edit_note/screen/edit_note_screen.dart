@@ -8,6 +8,7 @@ import 'package:pos_bank/app/resources/styles_manger.dart';
 import 'package:pos_bank/domain/models/note_model.dart';
 import 'package:pos_bank/domain/models/users_model.dart';
 import 'package:pos_bank/gen/assets.gen.dart';
+import 'package:pos_bank/presentation/add_user/cubit/add_user_cubit.dart';
 
 class EditNoteScreen extends StatefulWidget {
   const EditNoteScreen({Key? key, required this.index}) : super(key: key);
@@ -24,6 +25,7 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
   void initState() {
     AppCubit appCubit = AppCubit.get(context);
     noteTextEditing.text = appCubit.notes[widget.index].text;
+
     super.initState();
   }
 
@@ -45,7 +47,7 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
               id: appCubit.notes[widget.index].id,
               text: noteTextEditing.text,
               placeDateTime: appCubit.notes[widget.index].placeDateTime,
-              userId: appCubit.userSelected);
+              userId: appCubit.userSelected!);
 
           MitX.back();
 
